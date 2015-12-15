@@ -58,9 +58,9 @@ public class ChatMessageAdapter extends ArrayAdapter{
 
 
         if( message_left ){
-            msgText.setBackground(this.getContext().getResources().getDrawable(R.drawable.a));
+            msgText.setBackground(this.getContext().getResources().getDrawable(R.drawable.a222));
         }else{
-            msgText.setBackground(this.getContext().getResources().getDrawable(R.drawable.b));
+            msgText.setBackground(this.getContext().getResources().getDrawable(R.drawable.b222));
         }
 
         LinearLayout chatMessageContainer = (LinearLayout)row.findViewById(R.id.chatmessage_container);
