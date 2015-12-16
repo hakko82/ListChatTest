@@ -11,6 +11,7 @@
         android:layout_gravity="right"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="150dp"
+        android:layout_marginRight="5dp"
         android:background="@drawable/right_round"
         android:paddingBottom="8dp"
         android:paddingLeft="10dp"

@@ -10,6 +10,7 @@
         android:layout_gravity="left"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="150dp"
+        android:layout_marginLeft="5dp"
         android:background="@drawable/left_round"
         android:paddingBottom="8dp"
         android:paddingLeft="10dp"
