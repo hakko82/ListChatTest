@@ -18,7 +18,6 @@ import java.util.List;
  */
 public class ChatMessageAdapter extends ArrayAdapter{
     List<ChatMessage> msgs = new ArrayList<ChatMessage>();
-    boolean message_left = true;
 
     public ChatMessageAdapter(Context context, int textViewResourceId) {
         super(context, textViewResourceId);
@@ -27,7 +26,6 @@ public class ChatMessageAdapter extends ArrayAdapter{
     //@Override
     public void add(ChatMessage object){
         msgs.add(object);
-        super.add(object);
     }
 
     @Override
@@ -56,22 +54,16 @@ public class ChatMessageAdapter extends ArrayAdapter{
         msgText.setText(msg.getMessage());
         msgText.setTextColor(Color.parseColor("#000000"));
 
-
-        if( message_left ){
+        int align;
+        if( position % 2 == 0 ){
+            align = Gravity.LEFT;
             msgText.setBackground(this.getContext().getResources().getDrawable(R.drawable.a222));
         }else{
+            align = Gravity.RIGHT;
             msgText.setBackground(this.getContext().getResources().getDrawable(R.drawable.b222));
         }
 
         LinearLayout chatMessageContainer = (LinearLayout)row.findViewById(R.id.chatmessage_container);
-        int align;
-        if( message_left ){
-            align = Gravity.LEFT;
-            message_left = false;
-        }else{
-            align = Gravity.RIGHT;
-            message_left = true;
-        }
         chatMessageContainer.setGravity(align);
 
         return row;
